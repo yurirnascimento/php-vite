@@ -88,22 +88,7 @@ class Manifest
      */
     public function preloadImages(): void
     {
-        $this->preload_types = [
-            ...$this->preload_types,
-            'apng' => ['type' => 'image/apng', 'as' => 'image'],
-            'avif' => ['type' => 'image/avif', 'as' => 'image'],
-            'bmp' => ['type' => 'image/bmp', 'as' => 'image'],
-            'cur' => ['type' => 'image/x-icon', 'as' => 'image'],
-            'gif' => ['type' => 'image/gif', 'as' => 'image'],
-            'ico' => ['type' => 'image/x-icon', 'as' => 'image'],
-            'jpeg' => ['type' => 'image/jpeg', 'as' => 'image'],
-            'jpg' => ['type' => 'image/jpeg', 'as' => 'image'],
-            'png' => ['type' => 'image/png', 'as' => 'image'],
-            'svg' => ['type' => 'image/svg+xml', 'as' => 'image'],
-            'tif' => ['type' => 'image/tiff', 'as' => 'image'],
-            'tiff' => ['type' => 'image/tiff', 'as' => 'image'],
-            'webp' => ['type' => 'image/webp', 'as' => 'image'],
-        ];
+        $this->preload_types = array_merge($this->preload_types, ['type' => 'image/apng', 'as' => 'image'], ['type' => 'image/avif', 'as' => 'image'], ['type' => 'image/bmp', 'as' => 'image'], ['type' => 'image/x-icon', 'as' => 'image'], ['type' => 'image/gif', 'as' => 'image'], ['type' => 'image/x-icon', 'as' => 'image'], ['type' => 'image/jpeg', 'as' => 'image'], ['type' => 'image/jpeg', 'as' => 'image'], ['type' => 'image/png', 'as' => 'image'], ['type' => 'image/svg+xml', 'as' => 'image'], ['type' => 'image/tiff', 'as' => 'image'], ['type' => 'image/tiff', 'as' => 'image'], ['type' => 'image/webp', 'as' => 'image']);
     }
 
     /**
@@ -111,13 +96,7 @@ class Manifest
      */
     public function preloadFonts(): void
     {
-        $this->preload_types = [
-            ...$this->preload_types,
-            'ttf' => ['type' => 'font/ttf', 'as' => 'font'],
-            'otf' => ['type' => 'font/otf', 'as' => 'font'],
-            'woff' => ['type' => 'font/woff', 'as' => 'font'],
-            'woff2' => ['type' => 'font/woff2', 'as' => 'font'],
-        ];
+        $this->preload_types = array_merge($this->preload_types, ['type' => 'font/ttf', 'as' => 'font'], ['type' => 'font/otf', 'as' => 'font'], ['type' => 'font/woff', 'as' => 'font'], ['type' => 'font/woff2', 'as' => 'font']);
     }
 
     /**
